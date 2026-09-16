@@ -1,0 +1,21 @@
+# Re-run the matrix and fail if README.md no longer matches what the compilers
+# do. Scheduled, because the point of the table is that it stays true after a
+# TypeScript release nobody here was watching for.
+name: matrix
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 6 1 * *'   # the 1st of each month, 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/run-matrix.mjs --check

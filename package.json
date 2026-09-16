@@ -1,0 +1,12 @@
+{
+  "name": "ts-narrowing-matrix",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Which TypeScript declaration forms keep a narrowed type, measured across compiler versions.",
+  "scripts": {
+    "matrix": "node scripts/run-matrix.mjs",
+    "check": "node scripts/run-matrix.mjs --check"
+  },
+  "license": "MIT"
+}
