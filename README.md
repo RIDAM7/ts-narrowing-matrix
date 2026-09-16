@@ -88,6 +88,10 @@ This repository is the measurement rather than the explanation — the table is
 what a build actually does, re-run in CI so it stays true when the compiler
 changes.
 
+The write-up of how it was found, and what the table changed about the answer:
+[Narrowing stops at a function
+declaration](https://ridamagrawal.com/writing/narrowing-stops-at-a-function-declaration).
+
 ## Running it
 
 ```bash
